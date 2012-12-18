@@ -1,0 +1,60 @@
+//==================================================//
+// author: zac owen
+//
+//==================================================//
+
+
+
+
+//==================================================//
+// basic color scheme
+//==================================================//
+
+@lighbrown: #AD8A6D;
+@brown: #7A4010;
+@darkbrown: rgb(242,215,133);
+@crab: rgb(242,93,80);
+@pine: #285436;
+@green: #107A13;
+@light: #ffffff;
+@fore: #353535;
+@shadow: rgb(53,53,53,0.2);
+
+//==================================================//
+// defaults
+//==================================================//
+
+body {
+  font: 400 14px/1.6 "Open Sans", sans-serif;
+  color: @fore;
+}
+
+//==================================================//
+// mixins
+//==================================================//
+
+.box-shadow(@radius, @color) {
+  -moz-box-shadow: @radius @color;
+  -webkit-box-shadow: @radius @color;
+  box-shadow: @radius @color;
+}
+
+//==================================================//
+//  navigation
+//==================================================//
+
+header {
+  background: @darkbrown;
+  padding: 15px 10px;
+  color: @fore;
+  h1 {
+
+  }
+  ul.nav {
+    list-style-type: none;
+  }
+}
+div.sliver {
+  background: @crab;
+  padding: 5px 0;
+}
