@@ -15,20 +15,20 @@ html.no-js(lang='en')
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width')
     link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=latin,latin-ext')
-    link(rel='stylesheet', href='stylesheets/vendor/bootstrap.min.css')
-    link(rel='stylesheet', href='stylesheets/vendor/bootstrap-responsive.min.css')
-    link(rel='stylesheet', href='stylesheets/layout.css')
-    link(rel='stylesheet', href='stylesheets/style.css')
-    //-script(src='javascripts/vendor/modernizr-2.6.2.min.js')
+    link(rel='stylesheet', href='/stylesheets/vendor/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/vendor/bootstrap-responsive.min.css')
+    link(rel='stylesheet', href='/stylesheets/layout.css')
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    //-script(src='/javascripts/vendor/modernizr-2.6.2.min.js')
   body
     include navigation
     block content
     include footer
     script(src='//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js')
     script(src='//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js')
-    script(src='javascripts/vendor/bootstrap.min.js')
+    script(src='/javascripts/vendor/bootstrap.min.js')
     script
-      window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.8.3.min.js"><\\/script>')
+      window.jQuery || document.write('<script src="/javascripts/vendor/jquery-1.8.3.min.js"><\\/script>')
     //-script(src='javascripts/init.js')
     //- change UA-XXXXX-X to your id and outdent the following:
     //-

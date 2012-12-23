@@ -1,4 +1,9 @@
 express = require "express"
-redis   = require "redis"
-config  = require "./config/environment"
-console.log "test"
+
+boot = (db, params) ->
+  app = express()
+  config = require(__dirname + "/config/environment")(app, db, params, express)
+  controller = require(__dirname + '/app/controllers/application')(app, db, params)
+  return app
+
+exports.boot = boot

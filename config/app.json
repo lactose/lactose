@@ -11,5 +11,8 @@
       "journal":true,
       "fsync":true
     }
+  },
+  "boot": {
+    "params": ""
   }
 }
