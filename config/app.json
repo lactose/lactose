@@ -5,11 +5,14 @@
     "host": "localhost",
     "port": 27017,
     "options": {
-      "auto_reconnect":true,
-      "w":"y",
-      "safe":false,
+      "w":1,
+      "safe":true,
       "journal":true,
-      "fsync":true
+      "fsync":false,
+      "getLastError": 1
+    },
+    "serverOptions": {
+      "auto_reconnect":true
     }
   },
   "boot": {

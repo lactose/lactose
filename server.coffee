@@ -5,7 +5,7 @@ cluster   = require "cluster"
 numCPUs   = require("os").cpus().length
 mongo     = require "mongodb"
 models    = require "./app/models/init"
-db        = new mongo.Db appConfig.db.name, new mongo.Server(appConfig.db.host, appConfig.db.port, appConfig.db.options)
+db        = new mongo.Db appConfig.db.name, new mongo.Server(appConfig.db.host, appConfig.db.port, appConfig.db.serverOptions), appConfig.db.options
 
 init = ->
   appConfig.boot.path = __dirname
