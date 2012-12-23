@@ -11,9 +11,9 @@ module.exports = (app, db, params, express) ->
     app.use express.methodOverride()
     app.use express.cookieParser('your secret here')
     app.use express.session()
-    app.use app.router
     app.use require('less-middleware')({ src: params.path + '/public' })
     app.use express.static(path.join(params.path, '/public'))
+    app.use app.router
 
   app.configure 'development', ->
     app.use express.errorHandler()
