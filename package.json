@@ -6,11 +6,12 @@
     "start": "node app"
   },
   "dependencies": {
+    "coffee-script": "*",
+    "connect-redis": "*",
     "express": "3.0.3",
     "jade": "*",
+    "less-middleware": "*",
     "mongodb": "1.2.5",
-    "redis": "*",
-    "coffee-script": "*",
-    "less-middleware": "*"
+    "redis": "*"
   }
 }
