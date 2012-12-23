@@ -4,8 +4,8 @@
  */
 
 var express = require('express')
-  , routes = require('./routes')
-  , user = require('./routes/user')
+  , routes = require('../app/controllers')
+  , user = require('../app/controllers/user')
   , http = require('http')
   , path = require('path');
 
@@ -13,7 +13,7 @@ var app = express();
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
-  app.set('views', __dirname + '/views');
+  app.set('views', __dirname + '/../app/views');
   app.set('view engine', 'jade');
   app.use(express.favicon());
   app.use(express.logger('dev'));
@@ -22,12 +22,16 @@ app.configure(function(){
   app.use(express.cookieParser('your secret here'));
   app.use(express.session());
   app.use(app.router);
-  app.use(require('less-middleware')({ src: __dirname + '/public' }));
-  app.use(express.static(path.join(__dirname, 'public')));
+  app.use(require('less-middleware')({ src: __dirname + '/../public' }));
+  app.use(express.static(path.join(__dirname, '../public')));
 });
 
 app.configure('development', function(){
   app.use(express.errorHandler());
+});
+
+app.configure('production', function(){
+
 });
 
 app.get('/', routes.index);

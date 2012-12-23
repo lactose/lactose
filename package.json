@@ -1,5 +1,5 @@
 {
-  "name": "application-name",
+  "name": "lactose",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -9,6 +9,8 @@
     "express": "3.0.3",
     "jade": "*",
     "mongodb": "1.2.5",
+    "redis": "*",
+    "coffee-script": "*",
     "less-middleware": "*"
   }
 }
