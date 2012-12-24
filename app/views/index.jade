@@ -4,3 +4,6 @@ block content
     div(class='container') 
         h1 i'm lactose
         p and i'm a fucking idiot
+        each post in posts
+          h1= post.title
+          p= post.body
