@@ -1,4 +1,4 @@
-extends layout
+extends ../layout
 
 block content
     div(class='container') 
@@ -7,3 +7,4 @@ block content
         each post in posts
           h1= post.title
           p= post.body
+          p= post._id

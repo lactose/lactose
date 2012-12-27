@@ -11,7 +11,10 @@ html.no-js(lang='en')
   head
     meta(charset='utf-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
-    title
+    if title
+      title= title
+    else
+      title lactose
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width')
     link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=latin,latin-ext')

@@ -1,4 +1,5 @@
 module.exports =
   default: (req, res, next, db) ->
-    db.blog.find().toArray (err, posts) ->
-      res.render 'index', {title: 'lactose', posts: posts}
+    db.post.find().toArray (err, posts) ->
+      dude = JSON.stringify(posts)
+      res.render 'home/index', {title: 'lactose', posts: posts, dude: dude}

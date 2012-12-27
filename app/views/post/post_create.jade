@@ -1,0 +1,27 @@
+extends ../layout
+
+block content
+  section#create-post
+    div(class='row')
+      div(class='span12')
+        form(class='form-horizontal', action='/post/create', method='POST')
+          fieldset
+            legend= title
+            div(class='control-group')
+              label(class='control-label', for='title') Post Title
+                span(class='required-text') *
+              div(class='controls')
+                input(name='title', class='input-xlarge', type='text')
+            div(class='control-group')
+              label(class='control-label', for='body') Post Body
+                span(class='required-text') *
+              div(class='controls')
+                input(name='body', class='input-xlarge', type='text')
+            div(class='control-group')
+              label(class='control-label', for='published') Publish Post
+                span(class='required-text') *
+              div(class='controls')
+                input(name='published', class='input-xlarge', type='checkbox')
+            div(class='form-actions')
+              button(type='submit', class='btn') Create
+

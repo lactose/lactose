@@ -1,0 +1,8 @@
+extends ../layout
+
+block content
+    div(class='container') 
+      form#form(method='POST', action='/admin/login')
+        legend login to admin please
+        input#user(type='text', name='user')
+        input(type='submit', value='submit')

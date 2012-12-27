@@ -2,7 +2,6 @@ db = null
 files = null
 fs = require 'fs'
 protect =
-  'admin':true
   'authorized':false
 
 module.exports = (app, database, params) ->
@@ -25,8 +24,8 @@ router = (req, res, next) ->
 
   if protect[controller] and !req.loggedIn
     login(req, res, next, db)
-  else if typeof recipient[action] == 'function' 
-    recipient[action](req, res, next, db) 
+  else if typeof recipient[action] == 'function'
+    recipient[action](req, res, next, db)
   else
     error(req, res, next, db)
 
@@ -38,4 +37,4 @@ error = (req, res, next, db) ->
 login = (req, res, next, db) ->
   options =
     title: 'login'
-  res.render 'login', options
+  res.render 'admin/login', options
