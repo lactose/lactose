@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic);
 html{font-size:100%;}
 body{font:400 14px/1.6 "Libre Baskerville",Arial,sans-serif;font-size:1.313em;line-height:1.524em;color:#353535;}
-header{background:#f2d785;padding:15px 10px;color:#353535;}header a,header a:hover,header a:visited,header a:active{color:#353535;}
+header{background:#ffffff;padding:15px 10px;color:#353535;}header a,header a:hover,header a:visited,header a:active{color:#353535;}
 header ul.nav{list-style-type:none;}
 div.sliver{background:#f25d50;padding:5px 0;}
 section{margin:40px 0 0 0;}

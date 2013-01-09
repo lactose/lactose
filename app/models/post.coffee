@@ -30,7 +30,7 @@ deleteBlogPost = (id, callback) ->
     callback err, item
 
 findPostById = (id, callback) ->
-  db.post.find {_id: new ObjectID(id) }, (err, item) ->
+  db.post.findOne {_id: new ObjectID(id) }, (err, item) ->
     console.log "found post #{JSON.stringify.item}" unless err
     callback err, item
 
@@ -38,3 +38,4 @@ exports.init = init
 exports.createBlogPost = createBlogPost
 exports.publishBlogPost = publishBlogPost
 exports.deleteBlogPost = deleteBlogPost
+exports.findPostById = findPostById
