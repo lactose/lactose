@@ -2,9 +2,10 @@ extends ../layout
 
 block content
     div(class='container') 
-        h1 i'm lactose
-        p and i'm a fucking idiot
+      section#posts
         each post in posts
-          h1= post.title
-          p= post.body
-          p= post._id
+          article(class='lac-post-summary')
+            h2= post.title
+            h3= post.date
+            p(class='lac-post-body--shortened')= post.body
+            p(class='hidden lac-post-id')= post._id

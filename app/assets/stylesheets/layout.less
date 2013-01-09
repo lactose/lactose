@@ -3,7 +3,10 @@
 //
 //==================================================//
 
-
+//==================================================//
+// imports
+//==================================================//
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic);
 
 
 //==================================================//
@@ -17,15 +20,22 @@
 @pine: #285436;
 @green: #107A13;
 @light: #ffffff;
+@black: #000000;
 @fore: #353535;
 @shadow: rgb(53,53,53,0.2);
+
 
 //==================================================//
 // defaults
 //==================================================//
+html {
+  font-size: 100%;
+}
 
 body {
-  font: 400 14px/1.6 "Open Sans", sans-serif;
+  font: 400 14px/1.6 "Libre Baskerville", Arial, sans-serif;
+  font-size: 1.313em;
+  line-height: 1.524em;
   color: @fore;
 }
 
@@ -47,6 +57,12 @@ header {
   background: @darkbrown;
   padding: 15px 10px;
   color: @fore;
+  a,
+  a:hover,
+  a:visited,
+  a:active {
+    color: @fore;
+  }
   h1 {
 
   }
@@ -62,6 +78,22 @@ div.sliver {
 //==================================================//
 // content
 //==================================================//
+
+section {
+  margin: 40px 0 0 0;
+}
+article {
+  width: 62%;
+  margin: 0px auto;
+}
+
+.lac-black-bar {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background: @black;
+}
 
 
 //==================================================//

@@ -23,3 +23,9 @@ module.exports =
     Post.deleteBlogPost req.params.id, (err, item) ->
       settings.message = "Successfully deleted post: #{item.title}"
       res.render 'post/post', settings
+  view: (req, res, next, db) ->
+    Post.findPostById req.params.id, (err, item) ->
+      settings =
+        title: item.title
+        post: item
+      res.render 'post/post_view', settings

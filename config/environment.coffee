@@ -1,5 +1,6 @@
 RedisStore = null
 path    = require 'path'
+less    = require 'less-middleware'
 
 module.exports = (app, db, params, express) ->
   initRedis(express)
@@ -10,11 +11,16 @@ module.exports = (app, db, params, express) ->
     app.use express.logger('dev')
     app.use express.bodyParser()
     app.use express.methodOverride()
-    app.use express.cookieParser('your secret here')
-    app.use express.session({ secret: 'plop', store: new RedisStore(), cookie: {
+    app.use express.cookieParser("#{process.env.LACTOSE_COOKIEPARSER}")
+    app.use express.session({ secret: "#{process.env.LACTOSE_SESSION}", store: new RedisStore(), cookie: {
       maxAge: 60000*( (60*24) * 30 ) # 30 days
     }})
-    app.use require('less-middleware')({ src: params.path + '/public' })
+    app.use less({
+      src: params.path + '/app/assets/stylesheets',
+      dest: params.path + '/public/stylesheets',
+      prefix: '/stylesheets',
+      compress: true
+    })
     app.use express.static(path.join(params.path, '/public'))
     app.use app.router
 

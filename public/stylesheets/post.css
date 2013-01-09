@@ -1,0 +1,4 @@
+article h1,article h2,article h3{text-align:center;line-height:1.5em;}
+article h3{padding-bottom:50px;font-size:0.7em;margin:0px;}
+article.lac-post-summary .lac-post-body--shortened{max-height:50px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+article.lac-post-summary .lac-post-body--shortened:after{content:'...';}

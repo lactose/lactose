@@ -1,0 +1,22 @@
+article {
+  h1, h2, h3 {
+    text-align: center;
+    line-height: 1.5em;
+  }
+  h3 {
+    padding-bottom: 50px;
+    font-size: 0.7em;
+    margin: 0px;
+  }
+  &.lac-post-summary {
+    .lac-post-body--shortened {
+      max-height: 50px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .lac-post-body--shortened:after {
+      content: '...'
+    }
+  }
+}
