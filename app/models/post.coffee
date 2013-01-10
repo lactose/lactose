@@ -10,12 +10,11 @@ init = (dbase) ->
   db.post = db.collection 'post'
 
 createBlogPost = (subject, body, publish = false, callback) ->
-  today = util.getNiceDate(new Date())
   post =
     title: subject
     body: body
     public: publish
-    date: today
+    date: new Date()
   db.post.insert post, (err, item) ->
     console.log "successfully inserted post" unless err
     callback err, item

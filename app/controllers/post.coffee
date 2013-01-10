@@ -1,4 +1,6 @@
+md   = require 'marked'
 Post = require '../models/post'
+Util = require '../helpers/utilities'
 
 module.exports =
   default: (req, res, next, db) ->
@@ -28,4 +30,6 @@ module.exports =
       settings =
         title: item.title
         post: item
+        md: md
+        nicedate: Util.getNiceDate item.date
       res.render 'post/post_view', settings

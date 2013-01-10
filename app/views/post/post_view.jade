@@ -6,6 +6,6 @@ block content
         article(class='lac-post-full')
           a(href='/post/view/#{post._id}')
             h2= post.title
-          h3= post.date
-          p(class='lac-post-body--full')= post.body
+          h3= nicedate
+          div(class='lac-post-body-full')!= md(post.body)
           p(class='hidden lac-post-id')= post._id

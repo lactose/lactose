@@ -12,6 +12,7 @@
     "jade": "*",
     "less-middleware": "*",
     "mongodb": "1.2.5",
+    "marked": "*",
     "redis": "*"
   }
 }
