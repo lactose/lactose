@@ -1,6 +1,8 @@
+hl   = require 'highlight.js'
 md   = require 'marked'
 Post = require '../models/post'
 Util = require '../helpers/utilities'
+
 
 module.exports =
   default: (req, res, next, db) ->
@@ -26,6 +28,13 @@ module.exports =
       settings.message = "Successfully deleted post: #{item.title}"
       res.render 'post/post', settings
   view: (req, res, next, db) ->
+    mdSettings =
+      gfm: true,
+      sanitize: true,
+      highlight: (code, lang) ->
+        return hl.highlight(lang, code).value
+
+    md.setOptions mdSettings
     Post.findPostById req.params.id, (err, item) ->
       settings =
         title: item.title

@@ -9,6 +9,7 @@
     "coffee-script": "*",
     "connect-redis": "*",
     "express": "3.0.3",
+    "highlight.js": "*",
     "jade": "*",
     "less-middleware": "*",
     "mongodb": "1.2.5",
