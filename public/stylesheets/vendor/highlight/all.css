@@ -1,10 +1,12 @@
-@import 'all.css';
+@import 'default.css';
+@import 'solarized_light.css';
+
+/*
 @import 'arta.css';
 @import 'ascetic.css';
 @import 'brown_paper.css';
 @import 'brown_papersq.png';
 @import 'dark.css';
-@import 'default.css';
 @import 'far.css';
 @import 'github.css';
 @import 'googlecode.css';
@@ -28,3 +30,4 @@
 @import 'vs.css';
 @import 'xcode.css';
 @import 'zenburn.css';
+*/

@@ -32,7 +32,7 @@ module.exports =
       gfm: true,
       sanitize: true,
       highlight: (code, lang) ->
-        return hl.highlight(lang, code).value
+        return hl.highlight(lang, code, true).value
 
     md.setOptions mdSettings
     Post.findPostById req.params.id, (err, item) ->
