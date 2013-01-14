@@ -7,6 +7,7 @@
 // imports
 //==================================================//
 @import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Cutive+Mono);
 
 
 //==================================================//
@@ -23,6 +24,8 @@
 @black: #000000;
 @fore: #353535;
 @shadow: rgb(53,53,53,0.2);
+@lgrey: #777777;
+@link: #777777;
 
 
 //==================================================//
@@ -37,6 +40,12 @@ body {
   font-size: 1.313em;
   line-height: 1.524em;
   color: @fore;
+}
+
+pre, code {
+  font-family: 'Cutive Mono', serif;
+  font-size: 14px;
+  padding: 0;
 }
 
 //==================================================//
@@ -66,8 +75,19 @@ header {
   h1 {
 
   }
-  ul.nav {
-    list-style-type: none;
+  .navbar {
+    .nav {
+      list-style-type: none;
+      margin-bottom: 0px;
+      li {
+        a {
+          &.brand {
+            color: @black;
+          }
+        }
+      }
+    }
+
   }
   .box-shadow(3px 3px 2px, 0.5);
 }

@@ -1,3 +1,11 @@
+section {
+  &#create-post {
+    textarea {
+      width: 75%;
+      height: 500px;
+    }
+  }
+}
 article {
   padding-bottom: 40px;
   p {
@@ -13,10 +21,14 @@ article {
     text-align: center;
     line-height: 1.5em;
   }
+  h2 {
+    margin: 0px auto;
+  }
   h3 {
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     font-size: 0.7em;
     margin: 0px;
+    color: @lgrey;
   }
   &.lac-post-summary {
     .lac-post-body--shortened {
@@ -29,4 +41,11 @@ article {
       content: '...'
     }
   }
+  .lac-post-more {
+    color: @link;
+    &:hover {
+      color: @fore;
+    }
+  }
+
 }

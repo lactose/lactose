@@ -13,10 +13,19 @@ block content
               div(class='controls')
                 input(name='title', class='input-xlarge', type='text')
             div(class='control-group')
+              label(class='control-label', for='title') Post Category
+                span(class='required-text') *
+              div(class='controls')
+                select(name='category', class='input-xlarge', type='text')
+            div(class='control-group')
               label(class='control-label', for='body') Post Body
                 span(class='required-text') *
               div(class='controls')
                 textarea(name='body', class='input-xlarge')
+            div(class='control-group')
+              label(class='control-label', for='title') Tags
+              div(class='controls')
+                input(name='tags', class='input-xlarge', type='text')
             div(class='control-group')
               label(class='control-label', for='published') Publish Post
                 span(class='required-text') *

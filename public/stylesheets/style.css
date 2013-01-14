@@ -1,8 +1,10 @@
 @import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Cutive+Mono);
 html{font-size:100%;}
 body{font:400 14px/1.6 "Libre Baskerville",Arial,sans-serif;font-size:1.313em;line-height:1.524em;color:#353535;}
+pre,code{font-family:'Cutive Mono',serif;font-size:14px;padding:0;}
 header{background:#ffffff;padding:15px 10px;color:#353535;-moz-box-shadow:3px 3px 2px rgba(0, 0, 0, 0.5);-webkit-box-shadow:3px 3px 2px rgba(0, 0, 0, 0.5);box-shadow:3px 3px 2px rgba(0, 0, 0, 0.5);-moz-box-shadow:3px 3px 2px 0.5;-webkit-box-shadow:3px 3px 2px 0.5;box-shadow:3px 3px 2px 0.5;}header a,header a:hover,header a:visited,header a:active{color:#353535;}
-header ul.nav{list-style-type:none;}
+header .navbar .nav{list-style-type:none;margin-bottom:0px;}header .navbar .nav li a.brand{color:#000000;}
 div.sliver{background:#f25d50;padding:5px 0;}
 section{margin:40px 0 0 0;}
 article{width:62%;margin:0px auto;}
@@ -10,9 +12,12 @@ article{width:62%;margin:0px auto;}
 footer{position:fixed;bottom:0;width:100%;height:20px;background:#f2d785 url('/images/brown_dark.png');padding:1px 10px;color:#ffffff;}footer h6{margin:0;padding:0;}
 footer p{margin:0;padding:0;font-size:12px;}
 footer:hover{height:35px;-moz-transition:height 0.2s linear;-webkit-transition:height 0.2s linear;transition:height 0.2s linear;}
+section#create-post textarea{width:75%;height:500px;}
 article{padding-bottom:40px;}article p{text-indent:30px;}
 article a{color:#353535;}article a:hover{text-decoration:none;}
 article h1,article h2,article h3{text-align:center;line-height:1.5em;}
-article h3{padding-bottom:50px;font-size:0.7em;margin:0px;}
+article h2{margin:0px auto;}
+article h3{padding-bottom:20px;font-size:0.7em;margin:0px;color:#777777;}
 article.lac-post-summary .lac-post-body--shortened{max-height:50px;text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
 article.lac-post-summary .lac-post-body--shortened:after{content:'...';}
+article .lac-post-more{color:#777777;}article .lac-post-more:hover{color:#353535;}

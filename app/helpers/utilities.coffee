@@ -3,6 +3,12 @@ months = [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'Augu
 getNiceDate = (date) ->
   nice = "#{months[date.getMonth()]} #{pluralize(date.getDate(), date.getDate())}, #{date.getFullYear()}"
 
+getDate = (date) ->
+  "#{date.getMonth() + 1}/#{date.getDate()}/#{date.getFullYear()}"
+
+getFirstN = (n, str) ->
+  "#{str.split(' ')[0..50].join(' ')}... "
+
 pluralize = (string, number) ->
   pluralized = ""
   switch number
@@ -15,3 +21,5 @@ pluralize = (string, number) ->
   pluralized
 
 exports.getNiceDate = getNiceDate
+exports.getDate = getDate
+exports.getFirstN = getFirstN
