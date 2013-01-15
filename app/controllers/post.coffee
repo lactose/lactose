@@ -40,5 +40,6 @@ module.exports =
         title: item.title
         post: item
         md: md
+        req: req
         nicedate: Util.getNiceDate item.date
       res.render 'post/post_view', settings

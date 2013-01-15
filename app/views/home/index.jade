@@ -5,7 +5,7 @@ block content
       section#posts
         each post in posts
           article(class='lac-post-summary')
-            a(href='/post/view/#{post._id}')
+            a(href='/post/view/#{post._id}', class='post--load')
               h2= post.title
             h3= "Posted on " + util.getNiceDate(post.date)
             p(class='lac-post-body--full')!= util.getFirstN(50, md(post.body))
