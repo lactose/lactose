@@ -21,6 +21,13 @@ module.exports =
             settings.message = 'Successfully created post'
           res.render 'post/post', settings
       else res.render 'post/post_create', settings
+  edit: (req, res, next, db) ->
+    settings =
+      title: "Edit a Post"
+      post: null
+    Post.findPostById req.params.id, (err, item) ->
+      settings.post = item unless err
+      res.render 'post/post_create', settings
   delete: (req, res, next, db) ->
     settings =
       title: 'Delete Blog Post'

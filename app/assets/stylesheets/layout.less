@@ -131,17 +131,37 @@ footer {
   background: @darkbrown url('/images/brown_dark.png');
   padding: 1px 10px;
   color: @light;
+  a,
+  a:hover{
+    color: @light;
+    text-decoration: none;
+  }
   h6 {
     margin: 0;
     padding: 0;
+    span {
+      padding-right: 10px;
+    }
+    i {
+      padding: 0 10px;
+    }
   }
   p {
     margin: 0;
     padding: 0;
     font-size: 12px;
   }
+  /* ==================================================//
+     css transitions?
+
   &:hover {
     height: 35px;
-    .transition(height, 0.2s, linear);
+    .transition(height, 0.9s, linear);
+    span, i {
+      font-size: 2em;
+      line-height: 40px;
+      .transition(font-size, 0.9s, swing);
+    }
   }
+  ===================================================== */
 }

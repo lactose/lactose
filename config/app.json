@@ -3,7 +3,7 @@
   "db": {
     "name": "lactose",
     "host": "localhost",
-    "port": 27017,
+    "port": 17017,
     "options": {
       "w":1,
       "safe":true,

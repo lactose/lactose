@@ -33,7 +33,7 @@ var LACTOSE = LACTOSE || { };
 
   }
 
-  Linc.add('init', generateBars);
+  //Linc.add('init', generateBars);
   //Linc.run({ all: true });
 
 }).call(this);

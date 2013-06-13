@@ -10,9 +10,10 @@ div.sliver{background:#f25d50;padding:5px 0;}
 section{margin:40px 0 0 0;}
 article{width:62%;margin:0px auto;}
 .lac-black-bar{position:absolute;left:0;width:100%;height:50px;background:#000000;}
-footer{position:fixed;bottom:0;width:100%;height:20px;background:#f2d785 url('/images/brown_dark.png');padding:1px 10px;color:#ffffff;}footer h6{margin:0;padding:0;}
+footer{position:fixed;bottom:0;width:100%;height:20px;background:#f2d785 url('/images/brown_dark.png');padding:1px 10px;color:#ffffff;}footer a,footer a:hover{color:#ffffff;text-decoration:none;}
+footer h6{margin:0;padding:0;}footer h6 span{padding-right:10px;}
+footer h6 i{padding:0 10px;}
 footer p{margin:0;padding:0;font-size:12px;}
-footer:hover{height:35px;-moz-transition:height 0.2s linear;-webkit-transition:height 0.2s linear;transition:height 0.2s linear;}
 section#create-post textarea{width:75%;height:500px;}
 article{padding-bottom:40px;}article p{text-indent:30px;}
 article a{color:#353535;}article a:hover{text-decoration:none;}
